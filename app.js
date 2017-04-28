@@ -5,7 +5,7 @@ var range = function(length) {
 /**
  * I could have done:
  *     
- *     var allSame = (a) => [...new Set([1, 2, 3, 3])].length === 1;
+ *     var allSame = (a) => [...new Set(a)].length === 1;
  *     
  * But this isn't code golf, regular for loop is way faster.
  * 
