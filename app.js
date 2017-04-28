@@ -2,6 +2,17 @@ var range = function(length) {
 	return [...Array(length).keys()];
 };
 
+/**
+ * I could have done:
+ *     
+ *     var allSame = (a) => [...new Set([1, 2, 3, 3])].length === 1;
+ *     
+ * But this isn't code golf, regular for loop is way faster.
+ * 
+ * @see https://jsperf.com/same-elements-in-array-for-vs-set-spread
+ * @param  array a
+ * @return bool
+ */
 var allSame = function(a) {
 	var temp;
 	for (var i = 0; i < a.length; i++) {
